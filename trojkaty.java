@@ -41,21 +41,18 @@ class Trojkaty {
          }
          // TODO: tutaj trzeba bedzie dopisac inne przypadki
     }
-
-       public static boolean czyIstniejeTrojkat(float a, float b, float c){
+    public static boolean czyIstniejeTrojkat(float a, float b, float c){
           if (a + b <= c) return false;
           if (a + c <= b) return false;
           if (b + c <= a) return false;
           return true;
-       }
+    }
   
-      public static boolean czyProstokatny(float a, float b, float c){
-          if (a * a + b * b == c*c) return true;
-          if (b * b + c * c == a*a) return true;
-          if (a * a + c * c == b*b) return true;
-          return false;
-      }
-  
+    public static boolean czyProstokatny(float a, float b, float c){
+        if (a * a + b * b == c*c) return true;
+        if (b * b + c * c == a*a) return true;
+        return a * a + c * c == b * b;
+    }
     /** Wyświetla ekran pomocy */
     public static void pomoc(){
         System.out.println("Acme INC. (C) 2022");
