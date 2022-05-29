@@ -46,8 +46,7 @@ class Trojkaty {
     public static boolean czyProstokatny(float a, float b, float c){
         if (a * a + b * b == c*c) return true;
         if (b * b + c * c == a*a) return true;
-        if (a * a + c * c == b*b) return true;
-        return false;
+        return a * a + c * c == b * b;
     }
     /** Wyświetla ekran pomocy */
     public static void pomoc(){
